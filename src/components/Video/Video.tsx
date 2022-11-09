@@ -51,7 +51,7 @@ export const Video = ({ lessonSlug }: VideoProps) => {
       </div>
     )
   }
-
+  
   return (
     <div className="flex-1">
       <div className="bg-black flex justify-center">

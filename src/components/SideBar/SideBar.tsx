@@ -35,7 +35,7 @@ export const SideBar = () => {
 
         <div className="flex flex-col gap-8">
           {data?.lessons.map(lesson => (
-            <Lesson key={lesson.id} title={lesson.title} slug={lesson.slug} availableAt={new Date(lesson.availableAt)}  type={lesson.lessonType} />
+            <Lesson key={lesson.id} title={lesson.title} slugUrl={lesson.slug} availableAt={new Date(lesson.availableAt)}  type={lesson.lessonType} />
           ))}
         </div>
     </aside>
