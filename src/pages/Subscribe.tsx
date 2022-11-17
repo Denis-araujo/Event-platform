@@ -24,7 +24,7 @@ export const Subscribe = () => {
       },
     });
 
-    navigate("/event");
+    navigate("/event/lesson/comecando-no-reactjs-em-2022");
   }
 
   return (
