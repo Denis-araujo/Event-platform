@@ -73,4 +73,4 @@
 
 ## Veja o projeto em produção
 
-<a href="https://event-platform-chi-bay.vercel.app/" ><p>Projeto</p></a>
+<a href="https://event-platform-chi-bay.vercel.app/" >Projeto</a>
