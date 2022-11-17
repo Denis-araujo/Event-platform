@@ -1,23 +1,29 @@
-import { useParams } from "react-router-dom"
-import { Header } from "../components/Header/Header"
-import { SideBar } from "../components/SideBar/SideBar"
-import { Video } from "../components/Video/Video"
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { Header } from "../components/Header/Header";
+import { SideBar } from "../components/SideBar/SideBar";
+import { Video } from "../components/Video/Video";
 
 interface Params {
-  slug: string
+  slug: string;
 }
 
 export const Event = () => {
+  const { slug } = useParams<{ slug: string }>();
 
-  const { slug } = useParams<{ slug: string }>()
+  const [teste, setTeste] = useState(false);
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
+    <div className="flex flex-col">
+      <Header menu={teste} setMenu={setTeste} />
       <main className="flex flex-1">
-        { slug ? <Video lessonSlug={slug} /> : <div className="flex-1"></div> }
-        <SideBar />
+        {slug ? (
+          <Video lessonSlug={slug} menu={teste} />
+        ) : (
+          <div className="flex-1"></div>
+        )}
+        <SideBar menu={teste} setMenu={setTeste} />
       </main>
     </div>
-  )
-}
+  );
+};
